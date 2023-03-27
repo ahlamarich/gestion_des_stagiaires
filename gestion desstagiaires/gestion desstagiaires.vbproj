@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA54CC2B-5909-469E-B0B8-34ACFF484DB0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>gestion_desstagiaires.My.MyApplication</StartupObject>
+    <RootNamespace>gestion_desstagiaires</RootNamespace>
+    <AssemblyName>gestion desstagiaires</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>gestion desstagiaires.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>gestion desstagiaires.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_200x200.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OleDb, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.OleDb.5.0.0\lib\net461\System.Data.OleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveUser.vb" />
+    <Compile Include="AfficherStagiaire.Designer.vb">
+      <DependentUpon>AfficherStagiaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AfficherStagiaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImprimerStagiaire.Designer.vb">
+      <DependentUpon>ImprimerStagiaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimerStagiaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Afficher2.Designer.vb">
+      <DependentUpon>Afficher2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Afficher2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimerResponsable.Designer.vb">
+      <DependentUpon>ImprimerResponsable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimerResponsable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AfficherStage.Designer.vb">
+      <DependentUpon>AfficherStage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AfficherStage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjouterStagiaire.Designer.vb">
+      <DependentUpon>AjouterStagiaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterStagiaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter1Responsable.Designer.vb">
+      <DependentUpon>Ajouter1Responsable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ajouter1Responsable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjouterAffectation.Designer.vb">
+      <DependentUpon>AjouterAffectation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterAffectation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attestation.Designer.vb">
+      <DependentUpon>Attestation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Attestation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReportResponsable.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportResponsable.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportStagiaire.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportStagiaire.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Projet.Designer.vb">
+      <DependentUpon>Projet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Projet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connexion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connexion.Designer.vb">
+      <DependentUpon>Connexion.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWelcome.Designer.vb">
+      <DependentUpon>FormWelcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormWelcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierResponsable.Designer.vb">
+      <DependentUpon>ModifierResponsable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierResponsable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierAffectation.Designer.vb">
+      <DependentUpon>ModifierAffectation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierAffectation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RechercheResponsable.Designer.vb">
+      <DependentUpon>RechercheResponsable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RechercheResponsable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RechercheAffectation.Designer.vb">
+      <DependentUpon>RechercheAffectation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RechercheAffectation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierStagiaire.Designer.vb">
+      <DependentUpon>ModifierStagiaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierStagiaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RechercheStagiaire.Designer.vb">
+      <DependentUpon>RechercheStagiaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RechercheStagiaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupprimerStagiaire.Designer.vb">
+      <DependentUpon>SupprimerStagiaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SupprimerStagiaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupprimerResponsable.Designer.vb">
+      <DependentUpon>SupprimerResponsable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SupprimerResponsable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupprimerAffectation.Designer.vb">
+      <DependentUpon>SupprimerAffectation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SupprimerAffectation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AfficherStagiaire.resx">
+      <DependentUpon>AfficherStagiaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimerStagiaire.resx">
+      <DependentUpon>ImprimerStagiaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Afficher2.resx">
+      <DependentUpon>Afficher2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimerResponsable.resx">
+      <DependentUpon>ImprimerResponsable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AfficherStage.resx">
+      <DependentUpon>AfficherStage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjouterStagiaire.resx">
+      <DependentUpon>AjouterStagiaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajouter1Responsable.resx">
+      <DependentUpon>Ajouter1Responsable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjouterAffectation.resx">
+      <DependentUpon>AjouterAffectation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attestation.resx">
+      <DependentUpon>Attestation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportResponsable.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportResponsable.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportStagiaire.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportStagiaire.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Projet.resx">
+      <DependentUpon>Projet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connexion.resx">
+      <DependentUpon>Connexion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWelcome.resx">
+      <DependentUpon>FormWelcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierResponsable.resx">
+      <DependentUpon>ModifierResponsable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierAffectation.resx">
+      <DependentUpon>ModifierAffectation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RechercheResponsable.resx">
+      <DependentUpon>RechercheResponsable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RechercheAffectation.resx">
+      <DependentUpon>RechercheAffectation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierStagiaire.resx">
+      <DependentUpon>ModifierStagiaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RechercheStagiaire.resx">
+      <DependentUpon>RechercheStagiaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupprimerStagiaire.resx">
+      <DependentUpon>SupprimerStagiaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupprimerResponsable.resx">
+      <DependentUpon>SupprimerResponsable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupprimerAffectation.resx">
+      <DependentUpon>SupprimerAffectation.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gestion_stagiaire2.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo_200x200.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
